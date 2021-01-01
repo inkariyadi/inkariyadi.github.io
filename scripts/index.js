@@ -29,7 +29,7 @@ const second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
-let countDown = new Date(`${config.birthdate} 13:54:00`).getTime();
+let countDown = new Date(`${config.birthdate} 14:39:00`).getTime();
 x = setInterval(function() {
   let now = new Date().getTime(),
     distance = countDown - now;
@@ -51,7 +51,7 @@ x = setInterval(function() {
     hw = w / 2, // half-width
     hh = h / 2,
     opts = {
-      strings: ['HAPPY', 'BIRTHDAY!', config.name],
+      strings: ['HAPPY 21st', 'BIRTHDAY,', config.name],
       charSize: 30,
       charSpacing: 35,
       lineHeight: 40,
