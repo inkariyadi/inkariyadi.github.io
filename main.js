@@ -35,7 +35,7 @@ function typeWriter() {
 }
 
 
-var countDownDate = new Date("Jan 1, 2021 12:09:30").getTime();
+var countDownDate = new Date("Jan 1, 2021 12:11:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
