@@ -92,7 +92,7 @@ var x = setInterval(function() {
     setTimeout(dor, 3000);
     
   }
-  else if(seconds<=10){
+  else if(seconds<=10 && minutes==0){
     document.getElementById("demo").innerHTML = " ";
     document.getElementById("demo").innerHTML = seconds;
   }
