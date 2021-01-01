@@ -23,8 +23,11 @@ document.getElementById("my_audio").load();
 var audio = new Audio('lagu.mp3');
 var mySoundObject;
 var i = 0;
-var txt = 'Happy Birthdayyyy'; /* The text */
+var j = 0
+var txt = 'Happy Birthdayyyy, ayaangg! <3'; /* The text */
+var txt2 = 'Semoga panjang umur!';
 var speed = 50; /* The speed/duration of the effect in milliseconds */
+var lanjut = false;
 
 function typeWriter() {
   if (i < txt.length) {
@@ -33,9 +36,17 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+function typeWriter2() {
+  // while(lanjut==)
+  if (j < txt2.length) {
+    document.getElementById("wish").innerHTML += txt2.charAt(j);
+    j++;
+    setTimeout(typeWriter2, speed);
+  }
+}
 
 
-var countDownDate = new Date("Jan 1, 2021 12:15:00").getTime();
+var countDownDate = new Date("Jan 1, 2021 12:30:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -57,6 +68,7 @@ var x = setInterval(function() {
   + minutes + "m " + seconds + "s ";
 
   // If the count down is finished, write some text
+  
   if (distance < 0) {
     
     clearInterval(x);
@@ -69,14 +81,20 @@ var x = setInterval(function() {
     
     confetti.start();
     document.getElementById("my_audio").play();
+    // mySoundObject.play();
     
     document.getElementById("demo").innerHTML = " ";
   
     
     // document.getElementById("demo").innerHTML = "HAPPY BIRTHDAYYYYY";
     typeWriter();
+    setTimeout(typeWriter2, 2000);
     setTimeout(dor, 3000);
     
+  }
+  else if(seconds<=10){
+    document.getElementById("demo").innerHTML = " ";
+    document.getElementById("demo").innerHTML = seconds;
   }
 }, 1000);
 
