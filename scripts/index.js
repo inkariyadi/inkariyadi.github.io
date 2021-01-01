@@ -8,7 +8,7 @@ document.getElementById("my_audio").src = "lagu2.mp3";
 document.getElementById("my_audio").load();
 
 const config = {
-  birthdate: 'Jan 1, 2021',
+  birthdate: 'Jan 2, 2021',
   name: 'ayaangg!'
 };
 
@@ -30,7 +30,7 @@ const second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
-let countDown = new Date(`${config.birthdate} 16:25:30`).getTime();
+let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
 x = setInterval(function() {
   let now = new Date().getTime(),
     distance = countDown - now;
