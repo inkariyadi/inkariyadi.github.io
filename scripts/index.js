@@ -3,11 +3,12 @@ const head = document.getElementById('head');
 const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 const buka = document.getElementById('buka');
+const klik = document.getElementById('klik');
 document.getElementById("my_audio").src = "lagu2.mp3";
 document.getElementById("my_audio").load();
 
 const config = {
-  birthdate: 'Jan 1, 2021',
+  birthdate: 'Jan 2, 2021',
   name: 'ayaangg!'
 };
 
@@ -29,7 +30,7 @@ const second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
-let countDown = new Date(`${config.birthdate} 14:52:00`).getTime();
+let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
 x = setInterval(function() {
   let now = new Date().getTime(),
     distance = countDown - now;
@@ -408,6 +409,7 @@ x = setInterval(function() {
 
   function anim() {
     window.requestAnimationFrame(anim);
+    
 
     ctx.fillStyle = '#fff';
     ctx.fillRect(0, 0, w, h);
@@ -421,7 +423,7 @@ x = setInterval(function() {
     }
 
     ctx.translate(-hw, -hh);
-
+    
     if (done) for (let l = 0; l < letters.length; ++l) letters[l].reset();
   }
 
@@ -467,6 +469,7 @@ x = setInterval(function() {
     function init() {
       box.addEventListener('click', openBox, false);
       box.addEventListener('click', showfireworks, false);
+      klik.addEventListener('click', hello,false);
     }
 
     function stepClass(step) {
@@ -481,6 +484,7 @@ x = setInterval(function() {
         buka.style.display = 'none';
         
         document.getElementById("my_audio").play();
+        clearInterval(x);
       }
       stepClass(step);
       if (step === 3) {
@@ -496,13 +500,18 @@ x = setInterval(function() {
     function showfireworks() {
       canvasC.style.display = 'initial';
       setTimeout(anim, 1500);
+      
+      
     }
-
+    
     init();
   }
 
   // if (distance < 0) {
-  //     clearInterval(x);
+      
   //     console.log("happy birthday");
   // }
 }, second);
+
+
+
