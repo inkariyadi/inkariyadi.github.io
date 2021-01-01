@@ -10,7 +10,11 @@ html{
     scroll-behavior: smooth;
 }
 
+.demo{
+    font-size: 10em;
+    color:black;
 
+}
 
 .hero-bg{
     background: #307D99 url('../images/background2.jpg');
@@ -105,7 +109,7 @@ section{
 }
 
 h1{
-    font-size: 1.4rem;
+    font-size: 5rem;
     margin : 2em 0 1.2em;
     text-shadow: 0.5px 0.5px 75px #393f57;
 }
@@ -235,7 +239,7 @@ img{
 }
 
 .contact {
-    background: #307D99 url('../images/background3.jpg');
+    background: #383e56 url('../images/background3.jpg');
     background-size: cover;
     margin : 0;
     color : #393f57;
