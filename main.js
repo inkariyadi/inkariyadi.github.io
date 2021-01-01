@@ -35,7 +35,7 @@ function typeWriter() {
 }
 
 
-var countDownDate = new Date("Jan 1, 2021 12:11:00").getTime();
+var countDownDate = new Date("Jan 1, 2021 12:13:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -71,7 +71,7 @@ var x = setInterval(function() {
     document.getElementById("my_audio").play();
     
     document.getElementById("demo").innerHTML = " ";
-    mySoundObject.play();
+  
     
     // document.getElementById("demo").innerHTML = "HAPPY BIRTHDAYYYYY";
     typeWriter();
