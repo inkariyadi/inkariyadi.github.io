@@ -3,6 +3,8 @@ const head = document.getElementById('head');
 const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 const buka = document.getElementById('buka');
+document.getElementById("my_audio").src = "lagu2.mp3";
+document.getElementById("my_audio").load();
 
 const config = {
   birthdate: 'Jan 1, 2021',
@@ -27,7 +29,7 @@ const second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
-let countDown = new Date(`${config.birthdate} 13:28:00`).getTime();
+let countDown = new Date(`${config.birthdate} 13:54:00`).getTime();
 x = setInterval(function() {
   let now = new Date().getTime(),
     distance = countDown - now;
@@ -477,6 +479,8 @@ x = setInterval(function() {
       if (step === 1) {
         box.removeEventListener('click', openBox, false);
         buka.style.display = 'none';
+        
+        document.getElementById("my_audio").play();
       }
       stepClass(step);
       if (step === 3) {
