@@ -1,9 +1,10 @@
 let btn = document.getElementById('cta-btn');
 // let overlay = document.getElementById('overlay');
-// btn.addEventListener('click',() => {
-//     overlay.style.display = 'grid';
-//     overlay.classList.add('animate-overlay');
-// })
+btn.addEventListener('click',() => {
+  audio.play();
+    // overlay.style.display = 'grid';
+    // overlay.classList.add('animate-overlay');
+})
 
 // const toTop = document.querySelector(".to-top");
 // window.addEventListener("scroll",()=>{
@@ -15,6 +16,12 @@ let btn = document.getElementById('cta-btn');
 //     }
 
 // })
+
+document.getElementById("my_audio").src = "lagu.mp3";
+document.getElementById("my_audio").load();
+
+var audio = new Audio('lagu.mp3');
+var mySoundObject;
 var i = 0;
 var txt = 'Happy Birthdayyyy'; /* The text */
 var speed = 50; /* The speed/duration of the effect in milliseconds */
@@ -28,7 +35,7 @@ function typeWriter() {
 }
 
 
-var countDownDate = new Date("Jan 3, 2021 10:57:00").getTime();
+var countDownDate = new Date("Jan 1, 2021 12:09:30").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -51,36 +58,37 @@ var x = setInterval(function() {
 
   // If the count down is finished, write some text
   if (distance < 0) {
+    
     clearInterval(x);
     
+    console.log("hore");
     confetti.maxCount = 300;
     confetti.particleSpeed = 5;
     confetti.frameInterval = 20;
     confetti.alpha = 1;
+    
     confetti.start();
+    document.getElementById("my_audio").play();
+    
     document.getElementById("demo").innerHTML = " ";
+    mySoundObject.play();
+    
     // document.getElementById("demo").innerHTML = "HAPPY BIRTHDAYYYYY";
     typeWriter();
     setTimeout(dor, 3000);
+    
   }
 }, 1000);
 
 
-btn.addEventListener('click',() =>{
-    
-    confetti.maxCount = 300;
-    confetti.particleSpeed = 5;
-    confetti.frameInterval = 20;
-    confetti.alpha = 1;
-    confetti.start();
-    setTimeout(dor, 3000);
-    
-    // setTimeout(myFunction, 3000);
-    
-})
 
 
 function dor() {
     confetti.stop();
 
 }
+
+function play(){
+  audio.play();
+}
+
